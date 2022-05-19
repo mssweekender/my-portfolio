@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 export const Btn = styled(LinkS)`
-  border-radius: 20px;
+  min-width: 180px;
+  text-align: center;
+  border-radius: 30px;
   white-space: nowrap;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
   color: white;
   font-size: 15px;
   font-family: var(--english);

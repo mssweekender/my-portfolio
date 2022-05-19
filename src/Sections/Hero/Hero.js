@@ -17,22 +17,7 @@ const Hero = () => {
             Always Starts from <br />
             Small Business
           </Title>
-          {/* <SocialMedia>
-            <div className="sns">
-              <div className="sns-item">
-                <FiInstagram className="instagram" size={40} />
-              </div>
-              <div className="sns-item">
-                <FiInstagram size={40} />
-              </div>
-              <div className="sns-item">
-                <FiInstagram size={40} />
-              </div>
-              <div className="sns-item">
-                <FiInstagram size={40} />
-              </div>
-            </div>
-          </SocialMedia> */}
+
           <ButtonSection>
             <Btn to="Works" smooth={true} duration={600}>
               Works
@@ -114,7 +99,7 @@ const Title = styled.h1`
   padding-top: 5rem;
   font-size: 3.5rem;
   line-height: 6rem;
-  /* background-color: black; */
+
   font-family: var(--english);
   font-weight: 600;
 
@@ -138,10 +123,6 @@ const ButtonSection = styled.div`
   align-items: center;
   gap: 2rem;
   @media screen and (max-width: 780px) {
-    /* flex-direction: column;
-    align-items: left; */
-    /* display: none; */
-    /* flex-direction: column; */
     gap: 0.5rem;
   }
 `;

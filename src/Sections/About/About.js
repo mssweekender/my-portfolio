@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Skills from "../../Sections/Skills/Skills";
 import titleImage from "../../assets/title-image.svg";
 import MyImg from "../../assets/MyImage.JPEG";
+import Gallery from "../../Components/Photos/Gallery";
 
 const About = () => {
   return (
@@ -61,6 +62,7 @@ const About = () => {
           </DetailRight>
         </AboutDetails>
       </Content>
+      <Gallery />
       <Skills />
     </Container>
   );
