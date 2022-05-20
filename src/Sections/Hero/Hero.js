@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-// import { FiInstagram } from "react-icons/fi";
 import { Btn } from "../../Components/Button/Button";
 import background from "../../assets/hero-bg.jpg";
-
-// import LineImage from "../../assets/line-box.svg";
-// style={{ backgroundImage: `url(${background})` }}
 
 const Hero = () => {
   return (
@@ -72,7 +68,8 @@ const Content = styled.div`
 
   position: relative;
   z-index: 999;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 680px) {
+    top: -10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -102,13 +99,14 @@ const Title = styled.h1`
 
   font-family: var(--english);
   font-weight: 600;
+  text-shadow: 0px 0px 15px rgba(64, 169, 255, 1);
 
   @media screen and (max-width: 1025px) {
     font-size: 3rem;
     line-height: 6rem;
   }
   @media screen and (max-width: 780px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 5rem;
   }
   @media screen and (max-width: 400px) {
@@ -123,6 +121,8 @@ const ButtonSection = styled.div`
   align-items: center;
   gap: 2rem;
   @media screen and (max-width: 780px) {
-    gap: 0.5rem;
+    margin-top: 20px;
+    gap: 2rem;
+    flex-direction: column;
   }
 `;

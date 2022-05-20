@@ -28,3 +28,11 @@ export const Btn = styled(LinkS)`
     padding: 0.5rem 1rem;
   }
 `;
+
+// export const BtnR = styled(LinkR)`
+//   color: #fff;
+//   text-align: center;
+//   padding: 8px 15px;
+//   background-color: lightcoral;
+//   border-radius: 30px;
+// `;

@@ -2,7 +2,6 @@ import Img1 from "../Photos/Gallery/image-1.jpg";
 import Img2 from "../Photos/Gallery/image-2.jpg";
 import Img3 from "../Photos/Gallery/image-3.jpg";
 import Img4 from "../Photos/Gallery/image-4.jpg";
-import Img5 from "../Photos/Gallery/image-5.jpg";
 import Img6 from "../Photos/Gallery/image-6.jpg";
 import Img7 from "../Photos/Gallery/image-7.jpg";
 import Img8 from "../Photos/Gallery/image-8.jpg";

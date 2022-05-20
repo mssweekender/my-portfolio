@@ -1,52 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-
 import { Card } from "../../Components/Cards/Card";
+import WorksLists from "./WorksLists";
 
 const Works = () => {
   return (
-    <Container id="Works">
-      <Content>
-        <SubTitle>Works</SubTitle>
-        <SectionTitle>制作事例</SectionTitle>
+    <>
+      <Container id="Works">
+        <Content>
+          <SubTitle>Works</SubTitle>
+          <SectionTitle>制作事例</SectionTitle>
 
-        <WorkSection>
-          <CardSection>
-            {Card.map(({ id, contentImage, title }) => {
-              return (
-                <CardElement key={id}>
-                  <CardItem>
-                    <WorkImage>
-                      <img
-                        src={require(`../../assets/${contentImage}`)}
-                        alt="work-image"
-                      />
-                    </WorkImage>
-                    <Title>{title}</Title>
-                  </CardItem>
-                </CardElement>
-              );
-            })}
-          </CardSection>
-        </WorkSection>
-      </Content>
-    </Container>
+          <WorkSection>
+            <WorksLists works={Card} />
+          </WorkSection>
+        </Content>
+      </Container>
+    </>
   );
 };
 
 export default Works;
 
 const Container = styled.div`
-  /* padding-top: 10rem; */
   width: 100%;
   height: auto;
   z-index: 0;
-  /* background: var(--sub-theme-color); */
   background: rgb(0, 0, 0);
   padding-bottom: 10rem;
   z-index: 0;
-  /* background-color: black; */
-  /* background-color: #1b1b4a; */
   @media screen and (max-width: 850px) {
     margin-top: 0rem;
     padding-bottom: 3rem;
@@ -63,7 +45,6 @@ const Content = styled.div`
 
   position: relative;
 
-  /* background-color: gray; */
   color: white;
 
   @media screen and (max-width: 1025px) {
@@ -202,58 +183,112 @@ const CardSection = styled.div`
   }
 `;
 
-const CardElement = styled.div``;
+// export const CardElement = styled.div``;
 
-const WorkImage = styled.div`
-  border-radius: 2rem;
-  overflow: hidden;
-  img {
-    width: 100%;
-    transition: 0.5s ease-in-out;
-    transform: scale(1.1);
+// const WorkImage = styled.div`
+//   border-radius: 2rem;
+//   overflow: hidden;
+//   img {
+//     width: 100%;
+//     transition: 0.5s ease-in-out;
+//     transform: scale(1.1);
 
-    &:hover {
-      transform: scale(1.3);
-    }
-  }
-  @media screen and (max-width: 1240px) {
-    border-radius: 1.5rem;
-  }
-  @media screen and (max-width: 850px) {
-    border-radius: 1rem;
-  }
-  @media screen and (max-width: 600px) {
-    /* border-radius: 2rem; */
-  }
-`;
-const Title = styled.h3`
-  margin-top: 1.2rem;
-  margin-bottom: 0.8rem;
-  margin-left: 0.8rem;
-`;
+//     &:hover {
+//       transform: scale(1.3);
+//     }
+//   }
+//   @media screen and (max-width: 1240px) {
+//     border-radius: 1.5rem;
+//   }
+//   @media screen and (max-width: 850px) {
+//     border-radius: 1rem;
+//   }
+//   @media screen and (max-width: 600px) {
+//     /* border-radius: 2rem; */
+//   }
+// `;
+// const Title = styled.h3`
+//   font-size: 0.8rem;
+//   /* background-color: aliceblue; */
+// `;
 
-const CardItem = styled.article`
-  /* background: #3e3e79; */
-  background: var(--sub-theme-about);
-  padding: 1.3rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  transition: 0.5s ease-in-out;
-  &:hover {
-    background: transparent;
-    /* border: 2px solid #3e3e79; */
-    border: 2px solid var(--sub-theme-accent);
-  }
-  @media screen and (max-width: 1240px) {
-    padding: 1rem;
-    border-radius: 1.5rem;
-  }
-  @media screen and (max-width: 850px) {
-    padding: 0.8rem;
-    border-radius: 1rem;
-  }
-  @media screen and (max-width: 600px) {
-    padding: 0.5rem;
-    /* border-radius: 2rem; */
-  }
-`;
+// const CardItem = styled.article`
+//   /* background: #3e3e79; */
+//   background: var(--sub-theme-about);
+//   padding: 1.3rem;
+//   border-radius: 2rem;
+//   border: 1px solid transparent;
+//   transition: 0.5s ease-in-out;
+//   &:hover {
+//     background: transparent;
+//     /* border: 2px solid #3e3e79; */
+//     border: 2px solid var(--sub-theme-accent);
+//   }
+//   @media screen and (max-width: 1240px) {
+//     padding: 1rem;
+//     border-radius: 1.5rem;
+//   }
+//   @media screen and (max-width: 850px) {
+//     padding: 0.8rem;
+//     border-radius: 1rem;
+//   }
+//   @media screen and (max-width: 600px) {
+//     padding: 0.5rem;
+//     /* border-radius: 2rem; */
+//   }
+// `;
+
+// const DetailSection = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   /* background-color: aliceblue; */
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 20px 20px 0 20px;
+// `;
+
+// const BtnSection = styled.div`
+//   /* margin-top: 20px; */
+//   button {
+//     background-color: var(--sub-theme-accent);
+//     color: white;
+//     padding: 8px 20px;
+//     border: none;
+//     appearance: none;
+//     outline: none;
+//     border-radius: 5px;
+//     transition: all 0.3s ease;
+//     &:hover {
+//       background-color: var(--sub-accent);
+//     }
+//   }
+// `;
+
+{
+  /* <CardSection>
+              {Card.map((Card, index) => {
+                return (
+                  <>
+                    <CardElement key={index}>
+                      <CardItem>
+                        <WorkImage>
+                          <img
+                            src={require(`../../assets/${Card.contentImage}`)}
+                            alt="work"
+                          />
+                        </WorkImage>
+                        <DetailSection>
+                          <Title>{Card.title}</Title>
+                          <BtnSection>
+                            <button>
+                              <a href="">more detail</a>
+                            </button>
+                          </BtnSection>
+                        </DetailSection>
+                      </CardItem>
+                    </CardElement>
+                  </>
+                );
+              })}
+            </CardSection> */
+}

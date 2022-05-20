@@ -36,6 +36,7 @@ export default Footer;
 const FooterContainer = styled.div`
   width: 100%;
   height: 100%;
+  background-color: rgb(0, 0, 0);
 
   .footer_wrapper {
     padding: 10rem 0;
