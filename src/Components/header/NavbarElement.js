@@ -3,12 +3,10 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  /* backdrop-filter: blur(10px); */
   background-color: black;
   font-family: var(--english);
   height: 80px;
   width: 100%;
-  /* margin-top: -80px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,9 +91,9 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(LinkS)`
-  border-radius: 50px;
-  background: var(--sub-theme-accent);
-  white-space: nowrap;
+  /* border-radius: 50px;
+  /* background: var(--sub-theme-accent); */
+  /* white-space: nowrap;
   padding: 10px 22px;
   color: white;
   font-size: 16px;
@@ -103,10 +101,25 @@ export const NavBtnLink = styled(LinkS)`
   border: none;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  text-decoration: none;
+  text-decoration: none; */
 
-  &:hover {
+  /* &:hover {
     transition: all 0.5s ease-in-out;
     background: var(--sub-accent);
+  }  */
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover,
+  :active {
+    transition: all 0.2s ease-in-out;
+    border-bottom: 3px solid var(--sub-theme-accent);
   }
 `;

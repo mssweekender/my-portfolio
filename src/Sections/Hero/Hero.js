@@ -29,7 +29,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
 const Container = styled.div`
   width: 100%;
   background-repeat: no-repeat;

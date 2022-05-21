@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -7,11 +7,11 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn,
-  NavBtnLink,
 } from "./NavbarElement";
 
 const Navbar = ({ toggle }) => {
+  const [section, setSection] = useState("");
+
   return (
     <Nav>
       <NavbarContainer>
@@ -20,30 +20,66 @@ const Navbar = ({ toggle }) => {
         </MobileIcon>
         <NavMenu>
           <NavItem>
-            <NavLinks to="home" smooth={true} duration={600}>
+            <NavLinks
+              to="home"
+              smooth={true}
+              duration={600}
+              style={{
+                borderBottom: section === "Home" ? "2px solid #00a8cc" : "",
+              }}
+              onClick={() => {
+                setSection("Home");
+              }}
+            >
               Home
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="about" smooth={true} duration={600}>
+            <NavLinks
+              to="about"
+              smooth={true}
+              duration={600}
+              style={{
+                borderBottom: section === "About" ? "3px solid #00a8cc" : "",
+              }}
+              onClick={() => {
+                setSection("About");
+              }}
+            >
               About
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="Works" smooth={true} duration={600}>
+            <NavLinks
+              to="Works"
+              smooth={true}
+              duration={600}
+              style={{
+                borderBottom: section === "Works" ? "2px solid #00a8cc" : "",
+              }}
+              onClick={() => {
+                setSection("Works");
+              }}
+            >
               Works
             </NavLinks>
           </NavItem>
-          {/* <NavItem>
-            <NavLinks to="Contact" smooth={true} duration={600}>
+
+          <NavItem>
+            <NavLinks
+              to="Contact"
+              smooth={true}
+              duration={600}
+              style={{
+                borderBottom: section === "Contact" ? "2px solid #00a8cc" : "",
+              }}
+              onClick={() => {
+                setSection("Contact");
+              }}
+            >
               Contact
             </NavLinks>
-          </NavItem> */}
-          <NavBtn>
-            <NavBtnLink to="Contact" smooth={true} duration={600}>
-              Contact
-            </NavBtnLink>
-          </NavBtn>
+          </NavItem>
         </NavMenu>
       </NavbarContainer>
     </Nav>
