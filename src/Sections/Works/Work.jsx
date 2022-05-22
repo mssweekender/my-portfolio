@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { Card } from "../../Components/Cards/Card";
 import { Link } from "react-router-dom";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
+import Footer from "../../Components/Footer/Footer";
+import { BtnR } from "../../Components/Button/Button";
 
 const Work = () => {
   const { id } = useParams();
@@ -23,7 +25,7 @@ const Work = () => {
         <span>
           <IoIosArrowDropleftCircle />
         </span>
-        Go Back
+        Back
       </LinkR>
       {work ? (
         <WorkWrapper>
@@ -39,12 +41,33 @@ const Work = () => {
             <Contents>
               <p className="work-data">{work.disc}</p>
               <p className="work-description">{work.disc_2}</p>
+              <ImageContainer>
+                <img
+                  src={require(`../../assets/${work.contentImage}`)}
+                  alt=""
+                  className="div1"
+                />
+                <img
+                  src={require(`../../assets/${work.contentImage}`)}
+                  alt=""
+                  className="div2"
+                />
+                <img
+                  src={require(`../../assets/${work.contentImage}`)}
+                  alt=""
+                  className="div3"
+                />
+              </ImageContainer>
+              <BtnR>
+                <a href={work.url}>Visit Website</a>
+              </BtnR>
             </Contents>
           </ContentSize>
         </WorkWrapper>
       ) : (
         ""
       )}
+      <Footer />
     </WorkPage>
   );
 };
@@ -53,7 +76,7 @@ export default Work;
 
 const WorkWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: max-content;
   color: black;
   display: flex;
   flex-direction: column;
@@ -82,17 +105,19 @@ const WorkWrapper = styled.div`
       width: 70%;
       background-color: var(--sub-theme-accent);
     }
-
-    @media screen and (max-width: 600px) {
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+    margin-bottom: 300px;
+    .work_title {
       font-size: 18px;
-      .work_title {
-        overflow-wrap: normal;
-      }
+      overflow-wrap: normal;
     }
   }
 `;
 
 const WorkHeader = styled.div`
+  max-width: 1000px;
   color: black;
   h1 {
     color: black;
@@ -117,6 +142,7 @@ const Cover = styled.img`
   object-position: center;
 
   @media screen and (max-width: 600px) {
+    width: 100%;
     height: max-content;
   }
   @media screen and (max-width: 400px) {
@@ -127,9 +153,8 @@ const Cover = styled.img`
 const WorkPage = styled.div`
   width: 100%;
   max-width: 1000px;
-  height: 100vh;
+  height: 100%;
   position: relative;
-  padding-bottom: 50px;
 `;
 
 const LinkR = styled(Link)`
@@ -167,6 +192,7 @@ const Contents = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   .work-data {
     color: black;
   }
@@ -185,5 +211,46 @@ const Contents = styled.div`
       color: black;
       font-size: 13px;
     }
+  }
+`;
+
+const ImageContainer = styled.div`
+  margin: 40px auto;
+  width: 100%;
+  height: calc(100% + 20px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  .div1 {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+    box-shadow: 3px 3px 30px rgba(19, 71, 83, 0.3);
+  }
+  .div2 {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+    box-shadow: 3px 3px 30px rgba(19, 71, 83, 0.3);
+  }
+  .div3 {
+    grid-area: 2 / 2 / 3 / 3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+    box-shadow: 3px 3px 30px rgba(19, 71, 83, 0.3);
   }
 `;

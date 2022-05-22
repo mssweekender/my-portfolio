@@ -16,7 +16,7 @@ const Gallery = () => {
     <GalleryBlock>
       <Modal className={modal ? "modal open" : "modal"}>
         <IoMdClose onClick={() => setModal()} className="svg" />
-        <img src={tempImg} />
+        <img src={tempImg} alt="" />
       </Modal>
       <GallerySection>
         {Data.map((item, index) => (
