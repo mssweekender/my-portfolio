@@ -120,7 +120,7 @@ const DetailSection = styled.div`
 const BtnSection = styled.div`
   pointer-events: fill;
   button {
-    min-width: 75px;
+    min-width: 120px;
     background-color: var(--sub-theme-accent);
     color: white;
     padding: 8px 20px;

@@ -28,9 +28,17 @@ const About = () => {
             </div>
             <div className="detail-text">
               <p>
-                大阪生まれ大阪育ちの22歳です。現在は、Webデザイナーとして活動しています。2022年3月に外国語系の大学を卒業し、10月から知識とスキルを向上するため、カナダでIT留学に挑戦します。
+                大阪生まれ大阪育ちの22歳。現在は、Webデザイナーとして活動しています。2022年3月に外国語系の大学を卒業し、10月から知識とスキルを向上するため、カナダでIT留学に挑戦します。
               </p>
-              <p className="hobby">趣味：写真・バスケ</p>
+              <div className="hobby_section">
+                <div className="hobby">
+                  <div className="cirlce_content"></div>
+                  <p className="text">趣味</p>
+                </div>
+                <div className="text_section">
+                  <p>写真 | バスケ</p>
+                </div>
+              </div>
             </div>
             <div className="detail-title two">
               <span className="circle" />
@@ -42,7 +50,7 @@ const About = () => {
                 WEB業界は今後もますます拡大していくでしょう。
                 <br />
                 <br />
-                僕はWEB業界が、企業や個人と信頼し協力し合えるような社会を目指しております！
+                僕はWEB業界が、企業や個人と信頼し協力し合えるような社会を目指しております。
                 目の前のことを楽しみながら取り組み、考え、実行し、改善しつつ日々成長していくことが私の一生涯の目標です。
               </p>
             </div>
@@ -400,6 +408,41 @@ const DetailRight = styled.div`
 
     .hobby {
       padding-top: 1.5rem;
+    }
+
+    .hobby_section {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      background-color: #1d4066; //
+      width: max-content;
+      border-radius: 20px;
+      .hobby {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        width: max-content;
+        background-color: #2e67a3;
+        border-radius: 20px;
+        padding: 5px 15px 5px 10px;
+        .cirlce_content {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #1d4066;
+        }
+        .text {
+        }
+      }
+      .text_section {
+        padding-right: 20px;
+        p {
+        }
+      }
     }
 
     @media screen and (max-width: 1280px) {
