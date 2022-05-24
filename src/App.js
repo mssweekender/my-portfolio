@@ -23,6 +23,7 @@ function App() {
 
 export default App;
 const AppSection = styled.div`
+  font-family: var(--japanese);
   width: 100%;
   /* height: 100vh; */
   display: flex;

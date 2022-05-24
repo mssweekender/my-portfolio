@@ -96,7 +96,8 @@ const SkillContent = styled.div`
   &:hover {
     background-color: var(--sub-theme-color);
     transform: rotate(-2deg);
-    filter: drop-shadow(0 0 0.75rem var(--sub-accent));
+    /* filter: drop-shadow(0 0 0.75rem var(--sub-accent)); */
+    box-shadow: 0 0 5rem var(--sub-accent);
   }
 `;
 
@@ -131,9 +132,6 @@ const FlexSection = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 95%;
-
-  /* background-color: blue; */
-  /* min-width: 200px; */
 `;
 
 const NAME = styled.div`

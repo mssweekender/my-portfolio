@@ -30,7 +30,9 @@ const WorkItem = ({ work: { id, contentImage, title, language } }) => {
 
 export default WorkItem;
 
-const Item = styled.div``;
+const Item = styled.div`
+  font-family: var(--japanese);
+`;
 
 const WorkImage = styled.div`
   border-radius: 15px;

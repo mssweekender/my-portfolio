@@ -248,7 +248,7 @@ const MyImage = styled.div`
   /* border-radius: 285px 0 285px 0; */
   border-radius: 50%;
   /* filter: drop-shadow(0 0 0.75rem #9130ce); */
-  filter: drop-shadow(0 0 2rem var(--sub-theme-accent));
+  box-shadow: 0 0 5rem var(--sub-theme-accent);
   overflow: hidden;
 
   img {
