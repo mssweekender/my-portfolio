@@ -30,7 +30,8 @@ const AppSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  position: relative;
+  overflow: hidden;
   /* background-color: black; */
 
   @media screen and (max-width: 1024px) {
