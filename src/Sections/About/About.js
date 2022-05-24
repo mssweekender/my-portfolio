@@ -240,18 +240,14 @@ const Subtitle = styled.h1`
 `;
 
 const MyImage = styled.div`
-  /* width: 414px;
-  height: 585px; */
   width: 300px;
   height: 300px;
   background-color: black;
-  /* border-radius: 285px 0 285px 0; */
-  border-radius: 50%;
-  /* filter: drop-shadow(0 0 0.75rem #9130ce); */
-  box-shadow: 0 0 5rem var(--sub-theme-accent);
   overflow: hidden;
 
   img {
+    border-radius: 50%;
+    box-shadow: 0 0 5rem var(--sub-theme-accent);
     width: 100%;
   }
 
