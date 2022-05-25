@@ -82,9 +82,6 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   border: none;
-  /* transform: skewY(-10deg); */
-  /* background: rgb(0, 0, 0); */
-  /* background: #0b2840; */
   color: white;
   position: relative;
 
@@ -243,11 +240,11 @@ const MyImage = styled.div`
   width: 300px;
   height: 300px;
   background-color: black;
+  border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0 0 5rem var(--sub-theme-accent);
 
   img {
-    border-radius: 50%;
-    box-shadow: 0 0 5rem var(--sub-theme-accent);
     width: 100%;
   }
 
@@ -446,6 +443,7 @@ const DetailRight = styled.div`
       /* padding: 0.2rem 0; */
     }
     @media screen and (max-width: 600px) {
+      width: 95%;
       font-size: 14px;
       margin-left: 1.5rem;
       padding: 1.3rem;

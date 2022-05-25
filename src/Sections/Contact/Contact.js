@@ -188,6 +188,8 @@ const Container = styled.div`
 
     .contact-right {
       height: 100%;
+      @media screen and (max-width: 680px) {
+      }
     }
 
     .contact-left {

@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
-// import Sidebar from "./Components/Sidebar/Sidebar";
-// import Navbar from "./Components/header/Navbar";
 
 import { GlobalStyle } from "./GlobalStyle";
 import Home from "./Pages/Home";
@@ -25,13 +23,12 @@ export default App;
 const AppSection = styled.div`
   font-family: var(--japanese);
   width: 100%;
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  /* position: relative;
+  overflow: hidden; */
   /* background-color: black; */
 
   @media screen and (max-width: 1024px) {

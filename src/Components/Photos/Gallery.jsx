@@ -40,27 +40,23 @@ const GallerySection = styled.div`
   margin: 30px auto;
   border-radius: 10px;
   color: white;
-  width: 70%;
-
+  width: 80%;
   background-color: #0c2a44;
   position: relative;
-
   z-index: 10;
   column-count: 4;
-  column-width: 33%;
 
   @media screen and (max-width: 680px) {
-    padding: 0 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
     column-count: 4;
-    width: 90%;
     column-gap: 5px;
+    width: 90%;
   }
 `;
 
 const Photo = styled.img`
   border-radius: 5px;
   width: 100%;
-  height: 100%;
   object-fit: cover;
   margin-top: 10px;
   transition: all 0.3s ease;
@@ -71,7 +67,8 @@ const Photo = styled.img`
     box-shadow: 2px 2px 30px var(--sub-theme-accent);
   }
   @media screen and (max-width: 680px) {
-    margin-top: 5px;
+    margin-top: 0px;
+    border-radius: 5px;
   }
 `;
 

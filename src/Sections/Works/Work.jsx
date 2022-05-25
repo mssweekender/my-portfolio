@@ -37,7 +37,9 @@ const Work = () => {
                   {work.title}
                   <span>様</span>
                 </h1>
-                <p className="language">{work.language.join(" | ")}</p>
+                <p className="language">
+                  使用ツールまたは言語：{work.language.join(" | ")}
+                </p>
               </WorkHeader>
               <Contents>
                 <TextSection>
@@ -45,7 +47,7 @@ const Work = () => {
                   <p className="work-description">{work.disc_2}</p>
                 </TextSection>
                 <ImageContainer>
-                  <img
+                  {/* <img
                     src={require(`../../assets/${work.contentImage}`)}
                     alt=""
                     className="div1"
@@ -59,7 +61,7 @@ const Work = () => {
                     src={require(`../../assets/${work.contentImage}`)}
                     alt=""
                     className="div3"
-                  />
+                  /> */}
                 </ImageContainer>
                 <BtnR>
                   <a href={work.url}>Visit Website</a>
