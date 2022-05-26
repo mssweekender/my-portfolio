@@ -23,6 +23,6 @@ export const Card = [
     ],
     disc_2:
       "今回はSNSでの集客を目的とされているため、モバイルサイズのみのデザインとなります。今後、PCサイズも含めたレスポンシブ対応も検討されるとのことでした。",
-    url: "https://tyroldo.com/",
+    url: "https://mssweekender.github.io/personal_gym_2/",
   },
 ];
